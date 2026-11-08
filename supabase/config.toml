@@ -1,0 +1,32 @@
+project_id = "energy-world"
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+[db]
+port = 54322
+major_version = 17
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql"]
+[studio]
+enabled = true
+port = 54323
+[local_smtp]
+enabled = true
+port = 54324
+[auth]
+enabled = true
+site_url = "energyworld://auth/callback"
+additional_redirect_urls = ["energyworld://auth/callback", "energyworld://reset-password"]
+minimum_password_length = 10
+[auth.email]
+enabled = true
+enable_confirmations = true
+[storage]
+enabled = true
+file_size_limit = "2MiB"
+[experimental]
+stack = true

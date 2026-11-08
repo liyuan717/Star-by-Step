@@ -1,0 +1,20 @@
+appId: dev.energyworld.local
+---
+- launchApp
+- assertVisible: 你好，开拓者
+- tapOn: 昵称
+- inputText: OfflineTester
+- hideKeyboard
+- scrollUntilVisible:
+    element: 启程
+- tapOn: 启程
+- assertVisible: 你好，OfflineTester
+- tapOn: 宇宙
+- assertVisible: 我的宇宙
+- tapOn: 任务
+- assertVisible: 目标与任务
+- tapOn: 奖励
+- assertVisible: 奖励中心
+- tapOn: 我的
+- tapOn: 设置与备份
+- assertVisible: 设置与备份
